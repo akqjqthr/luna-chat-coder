@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luna Tetris</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="game-shell">
+      <div class="brand"><span>✦</span> LUNA TETRIS</div>
+      <div class="layout">
+        <div class="board-wrap">
+          <canvas id="board" width="300" height="600" aria-label="테트리스 게임판"></canvas>
+          <div id="overlay" class="overlay">
+            <h1 id="overlayTitle">LUNA TETRIS</h1>
+            <p id="overlayText">게임을 시작하세요</p>
+            <button id="startBtn">게임 시작</button>
+          </div>
+        </div>
+        <aside class="side">
+          <div class="card next-card"><h2>NEXT</h2><canvas id="next" width="120" height="120"></canvas></div>
+          <div class="stats card">
+            <div><span>SCORE</span><strong id="score">0</strong></div>
+            <div><span>LINES</span><strong id="lines">0</strong></div>
+            <div><span>LEVEL</span><strong id="level">1</strong></div>
+          </div>
+          <div class="controls card">
+            <h2>CONTROLS</h2>
+            <p>← → 이동</p><p>↑ 회전</p><p>↓ 빠르게</p><p>SPACE 즉시 낙하</p><p>P 일시정지</p>
+          </div>
+          <button id="pauseBtn" class="secondary">일시정지</button>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <script src="./game.js"></script>
+</body>
+</html>
